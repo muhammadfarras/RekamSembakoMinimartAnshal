@@ -138,6 +138,8 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
 
 //        Back to start activity intent
         startActivity(Intent(this@ScanActivity,MainActivity::class.java))
+
+//
         finish()
 
     }
