@@ -44,7 +44,6 @@ class CheckSembakoActivity : AppCompatActivity() {
 
 //        Ketika onCreate selalu noll kan companionObjectnya
         restartCheckedItem ()
-
         binding = ActivityCheckSembakoBinding.inflate(layoutInflater)
         myContext = this
         setContentView(binding.root)
@@ -52,12 +51,13 @@ class CheckSembakoActivity : AppCompatActivity() {
         var sharedPref: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
 
-
         val idSembako = intent.extras?.getString(Access.idSembako)
         val namaPegawai = intent.extras?.getString(Access.namaPegawai)
         val statusPengambilan = intent.extras?.getString(Access.statusPengambilan)
         val niyPegawai = intent.extras?.getString(Access.niyPegawai)
         val waktuPengambilan = dateFormater(intent.extras?.getString(Access.waktuPengambilan))
+
+        Log.d("WAKTU-PENGAMBILAN",waktuPengambilan)
 
         //        Jika sembako sudah diambil maka tombol button di disable
         if (statusPengambilan == "Sudah"){
@@ -173,7 +173,18 @@ class CheckSembakoActivity : AppCompatActivity() {
             val bulan = SimpleDateFormat ("M").format(date).let {
                 when (it.toInt()) {
                     1 -> "Januri"
+                    2 -> "Februari"
                     3 -> "Maret"
+                    4 -> "April"
+                    5 -> "Mei"
+                    6 -> "Juni"
+                    7 -> "Juli"
+                    8 -> "Agustus"
+                    9 -> "September"
+                    10 -> "Oktober"
+                    11 -> "November"
+                    12 -> "Desember"
+
 
                     else -> {
                         "Wrong Number"

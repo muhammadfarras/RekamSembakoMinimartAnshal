@@ -89,7 +89,7 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
                     ) {
 
                         if (response.isSuccessful){
-                            Log.d("MainActivity","Hasil Retrofit :${response.body()?.status}")
+                            Log.d("MainActivity","Hasil Retrofit :${response.body()?.nilai?.waktuPengambilan}")
 
                             if (response.body()?.status.toString() == "Yes"){
                                 //                        Intent ke Check Sembako Activity
