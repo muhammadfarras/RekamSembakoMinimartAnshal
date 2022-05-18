@@ -8,18 +8,18 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface ResponseService {
-    @GET("sembako/api/getStatus/")
+    @GET("sembako/Api/getStatus/")
     fun getStatusSembako(@Query("id_sembako") id_sembako: String?) : Call<ResponseStatus>
 
-    @GET("sembako/api/getBarang")
+    @GET("sembako/Api/getBarang")
     fun getBarangSembako(@Query("id_sembako") id_sembako: String?) : Call<ResponseBarang>
 
 
-    @GET("sembako/api/getNumberSembakoTaken")
+    @GET("sembako/Api/getNumberSembakoTaken")
     fun getNumberTakenSembako(@Query("kode_sembako") kode_sembako: String?) : Call<ResponseNumberTakenSembako>
 
     @FormUrlEncoded
-    @POST("sembako/api/setStatus/index.php")
+    @POST("sembako/Api/setStatus/index.php")
     fun setStatusSembako(@Field("id_sembako") id_sembako: String?) : Call<ResponseSetStatus>
 
 }

@@ -121,6 +121,7 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener,
                     ) {
                         if (response.isSuccessful){
                             var result = response.body()
+                            Log.d("Result Pie", result.toString())
 
                             result?.status.let {
                                 if (it == "Yes") {
@@ -131,6 +132,7 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener,
                                 }
                             }
                         }
+                        Log.d("Result Pie", response.toString())
                     }
 
                     override fun onFailure(call: Call<ResponseNumberTakenSembako>, t: Throwable) {

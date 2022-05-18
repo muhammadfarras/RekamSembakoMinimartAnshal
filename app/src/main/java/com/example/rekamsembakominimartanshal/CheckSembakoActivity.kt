@@ -172,7 +172,7 @@ class CheckSembakoActivity : AppCompatActivity() {
 
             val bulan = SimpleDateFormat ("M").format(date).let {
                 when (it.toInt()) {
-                    1 -> "Januri"
+                    1 -> "Januari"
                     2 -> "Februari"
                     3 -> "Maret"
                     4 -> "April"
